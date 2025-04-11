@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="coches2.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<!DOCTYPE coches [
+    <!ELEMENT coches (coche+)>
+    <!ELEMENT coche (marca, modelo, anio, color, precio, potencia, combustible, transmision, kilometraje, revisiones)>
+    <!ELEMENT marca (#PCDATA)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT potencia (#PCDATA)>
+    <!ELEMENT combustible (#PCDATA)>
+    <!ELEMENT transmision (#PCDATA)>
+    <!ELEMENT kilometraje (#PCDATA)>
+    <!ELEMENT revisiones (primera_revision, ultima_revision)>
+    <!ELEMENT primera_revision (#PCDATA)>
+    <!ELEMENT ultima_revision (#PCDATA)>
+    <!ATTLIST coche id CDATA #REQUIRED>
+    <!ATTLIST precio moneda CDATA #REQUIRED>           
+]>
+
+<coches>
+
+    <!-- Cada coche tiene un atributo único llamado id con numeros del 1 al 15 -->
+    <coche id="coche1">
+        <marca>Ford</marca>
+        <modelo>Focus</modelo>
+        <anio>2020</anio>
+        <color>Rojo</color>
+        <precio moneda="EUR">20000</precio>
+        <potencia>150</potencia>
+        <combustible>Gasolina</combustible>
+        <transmision>Manual</transmision>
+        <kilometraje><![CDATA[<b>25000 km</b>]]></kilometraje>
+        <!-- EL CDATA de HTML no lo tengo tan claro pero lo he dejado en km por ejemplo en cada uno de los
+        coches con la etiqueta <b></b> para que se muestre en negrita como una descripcion debajo de cada coche
+        tengo la sesacion o la idea que tambien puede funcionar como un enlace dependiendo la etiqueta que usemos
+        de HTML en alguna app como amazon por ejemplo para ir a la tienda del vendedor pinchando en el texto -->
+        <revisiones>
+            <primera_revision>2020-01-15</primera_revision>
+            <ultima_revision>2021-01-15</ultima_revision>
+            
+        </revisiones>
+    </coche>
+
+    <coche id="coche2">
+        <marca>Kia</marca>
+        <modelo>Sport</modelo>
+        <anio>2017</anio>
+        <color>Amarillo</color>
+        <precio moneda="EUR">18000</precio>
+        <potencia>120</potencia>
+        <combustible>Electrico</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[<b>23000 km</b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2019-10-02</primera_revision>
+            <ultima_revision>2020-10-02</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche3">
+        <marca>citroen</marca>
+        <modelo>golden</modelo>
+        <anio>2010</anio>
+        <color>Blanco</color>
+        <precio moneda="EUR">16000</precio>
+        <potencia>110</potencia>
+        <combustible>Gasolina</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[<b>22000 km</b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2020-09-11</primera_revision>
+            <ultima_revision>2021-09-11</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche4">
+        <marca>Toyota</marca>
+        <modelo>Corolla</modelo>
+        <anio>2019</anio>
+        <color>Azul</color>
+        <precio moneda="EUR">22000</precio>
+        <potencia>140</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[<b> 4000 km</b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2021-01-09</primera_revision>
+            <ultima_revision>2022-01-09</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche5">
+        <marca>Toyota</marca>
+        <modelo>Yaris</modelo>
+        <anio>2016</anio>
+        <color>Azul</color>
+        <precio moneda="EUR">34000</precio>
+        <potencia>140</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[<b> 12000 km</b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2010-05-02</primera_revision>
+            <ultima_revision>2011-05-02</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche6">
+        <marca>Toyota</marca>
+        <modelo>Corolla</modelo>
+        <anio>2019</anio>
+        <color>Verde</color>
+        <precio moneda="EUR">20000</precio>
+        <potencia>170</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Manual</transmision>
+        <kilometraje><![CDATA[ <b>1300 km </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2021-09-09</primera_revision>
+            <ultima_revision>2022-09-09</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche7">
+        <marca>Nissan</marca>
+        <modelo>Court</modelo>
+        <anio>2022</anio>
+        <color>Gris</color>
+        <precio moneda="EUR">30000</precio>
+        <potencia>140</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Manual</transmision>
+        <kilometraje><![CDATA[ <b> 2300 km </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2020-06-12</primera_revision>
+            <ultima_revision>2021-06-12</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche8">
+        <marca>Toyota</marca>
+        <modelo>Revolution</modelo>
+        <anio>2023</anio>
+        <color>Azul y gris</color>
+        <precio moneda="EUR">24000</precio>
+        <potencia>190</potencia>
+        <combustible>Electrico</combustible>
+        <transmision>Manual</transmision>
+        <kilometraje><![CDATA[ <b> 2100 km </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2020-06-10</primera_revision>
+            <ultima_revision>2020-06-10</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche9">
+        <marca>Mazda</marca>
+        <modelo>Corner</modelo>
+        <anio>2023</anio>
+        <color>Gris</color>
+        <precio moneda="EUR">23000</precio>
+        <potencia>111</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[ <b> 2300 </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2017-08-08</primera_revision>
+            <ultima_revision>2018-08-08</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche10">
+        <marca>Nissan</marca>
+        <modelo>March</modelo>
+        <anio>2019</anio>
+        <color>Azul</color>
+        <precio moneda="EUR">18000</precio>
+        <potencia>140</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[ <b> 2130 </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2019-09-17</primera_revision>
+            <ultima_revision>2020-09-17</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche11">
+        <marca>Toyota</marca>
+        <modelo>Supreme</modelo>
+        <anio>2024</anio>
+        <color>Verde</color>
+        <precio moneda="EUR">18000</precio>
+        <potencia>110</potencia>
+        <combustible>Gasolina</combustible>
+        <transmision>Manual</transmision>
+        <kilometraje><![CDATA[ <b> 2100km </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2022-03-21</primera_revision>
+            <ultima_revision>2023-03-21</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche12">
+        <marca>mitsubishi</marca>
+        <modelo>Lancer</modelo>
+        <anio>2020</anio>
+        <color>rojo</color>
+        <precio moneda="EUR">30000</precio>
+        <potencia>150</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[ <b> 1200 </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2022-09-05</primera_revision>
+            <ultima_revision>2023-09-05</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche13">
+        <marca>ford</marca>
+        <modelo>focus</modelo>
+        <anio>2014</anio>
+        <color>Negro</color>
+        <precio moneda="EUR">22000</precio>
+        <potencia>190</potencia>
+        <combustible>Híbrido</combustible>
+        <transmision>Manual</transmision>
+        <kilometraje><![CDATA[ <b> 2400 km </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2019-01-10</primera_revision>
+            <ultima_revision>2020-01-10</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche14">
+        <marca>Toyota</marca>
+        <modelo>Yaris</modelo>
+        <anio>2021</anio>
+        <color>Verde</color>
+        <precio moneda="EUR">18000</precio>
+        <potencia>120</potencia>
+        <combustible>Electrico</combustible>
+        <transmision>Automática</transmision>
+        <kilometraje><![CDATA[ <b> 100 km </b>]]></kilometraje>
+        <revisiones>
+            <primera_revision>2018-08-10</primera_revision>
+            <ultima_revision>2019-08-10</ultima_revision>
+        </revisiones>
+    </coche>
+
+    <coche id="coche15">
+        <marca>Tesla</marca>
+        <modelo>cibertruck</modelo>
+        <anio>2022</anio>
+        <color>blanco</color>
+        <precio moneda="EUR">23000</precio>
+        <potencia>190</potencia>
+        <combustible>Gasolina</combustible>
+        <transmision>Manual</transmision>
+        <kilometraje><![CDATA[ <b< 3000 km </b>]]></kilometraje>
+        <revisiones>  <!-- Afregue solo com ejemplo dos fechas de revision con un año de diferencia entre ellas -->
+            <primera_revision>2023-07-10</primera_revision>
+            <ultima_revision>2024-07-10</ultima_revision>
+        </revisiones>
+    </coche>
+    
+</coches>
